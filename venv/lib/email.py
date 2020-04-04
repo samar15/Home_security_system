@@ -3,7 +3,7 @@ import config
 import email.mime.multipart
 import email.mime.text
 
-server= smtplib.SMTP(host=smtp.gmail.com,587)
+server= smtplib.SMTP('smtp.gmail.com', 587)
 server.ehlo()
 server.starttls()
 server.ehlo()
