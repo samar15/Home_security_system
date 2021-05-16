@@ -7,7 +7,7 @@ def send_Email():
         server.ehlo()
         server.starttls()
         server.login(config.email_Address,config.password)
-        message = 'Subject: {}\n\n{}.format(config.subject,config.msg)'
+        message = f'Subject: {config.subject} \n\n {config.msg}'
         server.sendmail(config.email_Address,config.recievers_email,message)
         server.quit()
         print("Success email is sent!")
