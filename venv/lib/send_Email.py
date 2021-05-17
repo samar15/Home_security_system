@@ -7,8 +7,7 @@ def send_Email():
         server.ehlo()
         server.starttls()
         server.login(config.email_Address,config.password)
-        message = f'Subject: {config.subject} \n\n {config.msg}'
-        server.sendmail(config.email_Address,config.recievers_email,message)
+        server.send_message(config.msg)
         server.quit()
         print("Success email is sent!")
     except:
